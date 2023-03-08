@@ -1,0 +1,98 @@
+body {
+	background: radial-gradient(circle, #fff, #ccc);
+	padding: 15px;
+}
+
+.grid-container {
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);  /*minmax(150px, 300px));
+
+	/*CUANDO SE MODIFICAN LAS COLUMNAS, TMB SE DEBE
+	MODIFICAR LA CANTIDAD DE ITEMS EN EL HTML Y VICE
+		repeat(CANTIDAD, TAMAÑO)
+			CANTIDAD: min-content, max-content,
+			mimmax
+		TAMAÑO: auto-fill	AGREGA COLUMNAS MIENTRAS
+							TENGA ESPACIO
+				auto-fit	REPARTE EL ESPACIO DISPONIBLE
+							ENTRE LA CANTIDAD DE COLUMNAS
+	NORMALMENTE SE USA:
+	.grid-template-columns: repeat(3, minmax(120px, 1fr))*/
+
+
+	grid-template-rows: repeat(3, 1fr);
+	border: 3px solid #000;
+	grid-gap: 10px;		/*BORDE ENTRE CELDAS*/
+	padding: 10px;
+	background: #999;
+	height: 600px;
+	/*grid-auto-rows: 150px; O COLUMNS
+	CUANDO SOBRA ALGUN ITEM SE AGRUPA ABAJO EN FORMA
+	FILA, CON ESTO SE LE DA EL TAMAÑO*/
+
+	/*grid-auto-flow: dense;
+	CUANDO QUEDA ALGUN HUECO (CELDA IMPLICITA)
+	SE RELLENA DE LA MANERA MAS OPTIMA*/
+
+	justify-items: center; /*start end space-arround
+					space-between space-evenly
+		CENTRA VERTICALMENTE DENTRO DE LA COLUMNA*/
+
+	align-items: center; /*start end space-arround
+				space-between space-evenly
+		CENTRA HORIZONTALMENTE DENTRO DE LA FILA*/
+
+	/*justify-content: center; start end 
+		CENTRA EL GRUPO DE COLUMNAS CUANDO EL ANCHO
+		DEL CONTENEDOR ES MAS GRANDE*/
+
+		/*align-content: center; start end 
+		CENTRA EL GRUPO DE FILAS CUANDO LA ALTURA
+		DEL CONTENEDOR ES MAS GRANDE*/
+
+
+
+
+
+}
+
+.grid-item {
+	border: 1px solid #000;
+/*	background: green;*/
+	font-size: 30px;
+	padding: 50px;
+
+}
+
+.grid-item:first-child {
+	background: #900;
+	/*grid-column: 1 / 3;
+	grid-row: 1 / 3;*/
+	align-self: start;
+}
+
+/*
+.grid-item:first-child {
+	background: #900;
+	grid-column: 1 / span 3;
+	grid-row: 1 / span 3;
+}	
+	LO MISMO QUE ARRIBA, PERO SPAN DICE QUE A PARTIR
+	DE LA LINEA 1 OCUPE 3 COLUMNAS */
+/*
+.grid-item:nth-child(2) {
+	background: greenyellow;
+	grid-column: 3 / 5;
+	grid-row: 1 / 3;
+}
+	RESPETAR EL NUMERO ORIGINAL DE COLUMNAS (LINEAS
+	VERTICALES QUE SEPARAN LAS CELDAS)
+	PARA PODER CAMBIAR LAS PROPIEDADES PARTICULARES
+	DE UN ITEM, SE DEBE COLOCAR DEBAJO DEL ITEM GENERAL*/
+
+
+
+
+
+ 
